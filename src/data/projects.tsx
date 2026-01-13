@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaMobileAlt } from "react-icons/fa";
 import {
   SiChakraui,
   SiDocker,
@@ -19,6 +19,7 @@ import {
   SiPython,
   SiReactquery,
   SiShadcnui,
+  SiSanity,
   SiSocketdotio,
   SiSupabase,
   SiTailwindcss,
@@ -29,8 +30,7 @@ import {
   SiVercel,
   SiOpencv,
   SiTensorflow,
-  SiPwa,
-  SiAmazons3,
+  SiAmazon,
   SiLeaflet,
   SiHtml5,
   SiCss3,
@@ -89,12 +89,12 @@ const PROJECT_SKILLS = {
   mongo: { title: "MongoDB", bg: "black", fg: "white", icon: <SiMongodb /> },
   express: { title: "Express", bg: "black", fg: "white", icon: <SiExpress /> },
   reactQuery: { title: "React Query", bg: "black", fg: "white", icon: <SiReactquery /> },
-  shadcn: { title: "ShanCN UI", bg: "black", fg: "white", icon: <SiShadcnui /> },
+  shadcn: { title: "Shadcn UI", bg: "black", fg: "white", icon: <SiShadcnui /> },
   aceternity: { title: "Aceternity", bg: "black", fg: "white", icon: <AceTernityLogo /> },
   tailwind: { title: "Tailwind", bg: "black", fg: "white", icon: <SiTailwindcss /> },
   docker: { title: "Docker", bg: "black", fg: "white", icon: <SiDocker /> },
   firebase: { title: "Firebase", bg: "black", fg: "white", icon: <SiFirebase /> },
-  sockerio: { title: "Socket.io", bg: "black", fg: "white", icon: <SiSocketdotio /> },
+  socketio: { title: "Socket.io", bg: "black", fg: "white", icon: <SiSocketdotio /> },
   js: { title: "JavaScript", bg: "black", fg: "white", icon: <SiJavascript /> },
   ts: { title: "TypeScript", bg: "black", fg: "white", icon: <SiTypescript /> },
   vue: { title: "Vue.js", bg: "black", fg: "white", icon: <SiVuedotjs /> },
@@ -108,8 +108,8 @@ const PROJECT_SKILLS = {
   vercel: { title: "Vercel", bg: "black", fg: "white", icon: <SiVercel /> },
   opencv: { title: "OpenCV", bg: "black", fg: "white", icon: <SiOpencv /> },
   tensorflow: { title: "TensorFlow", bg: "black", fg: "white", icon: <SiTensorflow /> },
-  pwa: { title: "PWA", bg: "black", fg: "white", icon: <SiPwa /> },
-  aws: { title: "AWS S3", bg: "black", fg: "white", icon: <SiAmazons3 /> },
+  pwa: { title: "PWA", bg: "black", fg: "white", icon: <FaMobileAlt /> },
+  aws: { title: "AWS S3", bg: "black", fg: "white", icon: <SiAmazon /> },
   leaflet: { title: "Leaflet", bg: "black", fg: "white", icon: <SiLeaflet /> },
   html: { title: "HTML5", bg: "black", fg: "white", icon: <SiHtml5 /> },
   css: { title: "CSS3", bg: "black", fg: "white", icon: <SiCss3 /> },
