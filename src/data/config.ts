@@ -24,16 +24,16 @@ const config = {
 
   // for github stars button
   githubUsername: "alwinjosegeorge",
-  githubRepo: "portfolio", 
+  githubRepo: "3D-portfolio",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/", // No Twitter provided, leaving blank or generic
+    twitter: "",
     linkedin: "https://www.linkedin.com/in/alwin-jose-george-5b204032b",
     instagram: "https://www.instagram.com/alwin_jose_george",
-    facebook: "", // No FA provided
+    facebook: "",
     github: "https://github.com/alwinjosegeorge",
   },
 };

@@ -51,13 +51,13 @@ const HeroSection = () => {
                       <h1
                         className={cn(
                           "-ml-[6px] leading-none font-thin text-transparent text-slate-800 text-left",
-                          "font-thin text-7xl md:text-7xl lg:text-8xl xl:text-9xl",
+                          "font-thin text-5xl md:text-6xl lg:text-7xl xl:text-8xl",
                           "cursor-default text-edge-outline font-display "
                         )}
                       >
                         {config.author.split(" ")[0]}
                         <br className="md:block hiidden" />
-                        {config.author.split(" ")[1]}
+                        {config.author.split(" ").slice(1).join(" ")}
                       </h1>
                     </TooltipTrigger>
                     <TooltipContent
@@ -112,14 +112,7 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
-                    <Link
-                      href={config.social.twitter}
-                      target="_blank"
-                    >
-                      <Button variant={"outline"}>
-                        <SiX size={24} />
-                      </Button>
-                    </Link>
+
                     <Link
                       href={config.social.github}
                       target="_blank"
