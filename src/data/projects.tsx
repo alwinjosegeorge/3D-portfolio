@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
+import { FaJava } from "react-icons/fa";
 import {
   SiChakraui,
   SiDocker,
@@ -26,7 +27,6 @@ import {
   SiThreedotjs,
   SiTypescript,
   SiVuedotjs,
-  SiJava,
   SiSqlite,
   SiVercel,
   SiOpencv,
@@ -234,7 +234,7 @@ const PROJECT_SKILLS = {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <SiJava />,
+    icon: <FaJava />,
   },
   sqlite: {
     title: "SQLite",
