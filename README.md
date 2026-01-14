@@ -25,12 +25,14 @@ Welcome to the repository for my personal portfolio website! This is where I sho
 - Node.js (v16+)
 - npm or yarn
 
+
 ### Installation
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/alwinjosegeorge/3D-portfolio.git
+    ```bash
+    git clone https://github.com/alwinjosegeorge/3D-portfolio.git
+    ```
 
 2. Navigate to the project directory:
 
