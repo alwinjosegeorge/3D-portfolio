@@ -161,7 +161,12 @@ const projects: Project[] = [
           <p className="font-mono mb-2">
             Citizens can easily report and track issues with automated geolocation tags.
           </p>
-          <SlideShow images={[`${BASE_PATH}/nammude-panchayat/landing.png`]} />
+          <SlideShow images={[
+            `${BASE_PATH}/nammude-panchayat/Homepage.png`,
+            `${BASE_PATH}/nammude-panchayat/admindashbord.png`,
+            `${BASE_PATH}/nammude-panchayat/Report Issue.png`,
+            `${BASE_PATH}/nammude-panchayat/Track Issue.png`
+          ]} />
 
           <TypographyH3 className="my-4 mt-8">Dashboard</TypographyH3>
           <p className="font-mono mb-2">
@@ -219,6 +224,25 @@ const projects: Project[] = [
             </Link>
           </div>
 
+          <TypographyH3 className="my-4 mt-8">Screenshots</TypographyH3>
+          <SlideShow images={[
+            `${BASE_PATH}/book-my-vandi/User Interface.png`,
+            `${BASE_PATH}/book-my-vandi/Seller Login Pages.png`,
+            `${BASE_PATH}/book-my-vandi/Account Creation Confirmation.png`
+          ]} />
+
+          <Link
+            className="font-mono underline flex gap-2 mb-8 mt-4"
+            rel="noopener"
+            target="_new"
+            href="https://github.com/alwinjosegeorge/Book_My_Vandi/blob/main/User_Manual.pdf"
+          >
+            <Button variant={"default"} size={"sm"}>
+              Visit User Manual
+              <ArrowUpRight className="ml-3 w-5 h-5" />
+            </Button>
+          </Link>
+
           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
           <ul className="list-disc ml-6">
             <li className="font-mono">Vehicle Booking & Approvals</li>
@@ -249,6 +273,15 @@ const projects: Project[] = [
             Eco Travel Mate is a smart mobility and eco-awareness web app designed to help users make greener travel choices. It tracks trips, monitors air quality, calculates carbon footprints, and provides AI-driven environmental insights.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="my-4 mt-8">Screenshots</TypographyH3>
+          <SlideShow images={[
+            `${BASE_PATH}/eco-travel-mate/1 Share Your Location.png`,
+            `${BASE_PATH}/eco-travel-mate/2 home page.png`,
+            `${BASE_PATH}/eco-travel-mate/3 Air Quality Monitor.png`,
+            `${BASE_PATH}/eco-travel-mate/4 Carbon Footprint Calculator.png`,
+            `${BASE_PATH}/eco-travel-mate/live.png`
+          ]} />
 
           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
           <ul className="list-disc ml-6">
@@ -284,6 +317,15 @@ const projects: Project[] = [
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
 
+          <TypographyH3 className="my-4 mt-8">Screenshots</TypographyH3>
+          <SlideShow images={[
+            `${BASE_PATH}/modern-gallery/Homepage.png`,
+            `${BASE_PATH}/modern-gallery/photo.jpg`,
+            `${BASE_PATH}/modern-gallery/photo1.jpg`,
+            `${BASE_PATH}/modern-gallery/photo2.jpg`,
+            `${BASE_PATH}/modern-gallery/photo4.jpg`
+          ]} />
+
           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
           <ul className="list-disc ml-6">
             <li className="font-mono">Full-Screen Visual Experience: Images are displayed in immersive full-screen layouts.</li>
@@ -314,6 +356,15 @@ const projects: Project[] = [
             LoveCapsule is a digital time-capsule web app that allows users to store and schedule delivery of text, voice, and video wishes for birthdays, anniversaries, and special moments. It ensures your emotions are preserved securely and delivered to the right person at the perfect time.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="my-4 mt-8">Screenshots</TypographyH3>
+          <SlideShow images={[
+            `${BASE_PATH}/lovecapsule/home.png`,
+            `${BASE_PATH}/lovecapsule/home2.png`,
+            `${BASE_PATH}/lovecapsule/dashboard.png`,
+            `${BASE_PATH}/lovecapsule/create_wish1.png`,
+            `${BASE_PATH}/lovecapsule/loging.png`
+          ]} />
 
           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
           <ul className="list-disc ml-6">
