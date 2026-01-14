@@ -2,7 +2,7 @@
 
 Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through stunning 3D animations, smooth interactions, and modern UI design. If you're into creative and futuristic web experiences, you're in the right place.
 
-![Portfolio Preview](https://github.com/alwinjosegeorge/3D-portfolio/blob/main/public/assets/nav-link-previews/landing.png?raw=true)
+[![Portfolio Preview](https://github.com/alwinjosegeorge/3D-portfolio/blob/main/public/assets/nav-link-previews/landing.png?raw=true)](https://alwinportfolio.vercel.app/)
 
 ## 🔥 Features
 
