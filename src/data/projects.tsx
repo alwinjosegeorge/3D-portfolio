@@ -258,7 +258,7 @@ const projects: Project[] = [
     id: "eco-travel-mate",
     category: "Sustainable Travel",
     title: "Eco Travel Mate",
-    src: "/assets/projects-screenshots/eco-travel-mate/2 home page.png",
+    src: "/assets/projects-screenshots/eco-travel-mate/Eco Travel Mate.mp4",
     screenshots: [],
     live: "https://eco-travel-mate.vercel.app/",
     github: "https://github.com/alwinjosegeorge/Eco-Travel-Mate",
