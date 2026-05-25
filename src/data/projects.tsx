@@ -28,8 +28,6 @@ import {
   SiVuedotjs,
   SiSqlite,
   SiVercel,
-  SiOpencv,
-  SiTensorflow,
   SiAmazon,
   SiLeaflet,
   SiHtml5,
@@ -106,8 +104,6 @@ const PROJECT_SKILLS = {
   java: { title: "Java", bg: "black", fg: "white", icon: <FaJava /> },
   sqlite: { title: "SQLite", bg: "black", fg: "white", icon: <SiSqlite /> },
   vercel: { title: "Vercel", bg: "black", fg: "white", icon: <SiVercel /> },
-  opencv: { title: "OpenCV", bg: "black", fg: "white", icon: <SiOpencv /> },
-  tensorflow: { title: "TensorFlow", bg: "black", fg: "white", icon: <SiTensorflow /> },
   pwa: { title: "PWA", bg: "black", fg: "white", icon: <FaMobileAlt /> },
   aws: { title: "AWS S3", bg: "black", fg: "white", icon: <SiAmazon /> },
   leaflet: { title: "Leaflet", bg: "black", fg: "white", icon: <SiLeaflet /> },
@@ -258,7 +254,7 @@ const projects: Project[] = [
     id: "eco-travel-mate",
     category: "Sustainable Travel",
     title: "Eco Travel Mate",
-    src: "/assets/projects-screenshots/eco-travel-mate/Eco Travel Mate.mp4",
+    src: "/assets/projects-screenshots/eco-travel-mate/2 home page.png",
     screenshots: [],
     live: "https://eco-travel-mate.vercel.app/",
     github: "https://github.com/alwinjosegeorge/Eco-Travel-Mate",
@@ -378,30 +374,57 @@ const projects: Project[] = [
     }
   },
   {
-    id: "true-shade",
-    category: "Accessibility",
-    title: "True Shade",
-    src: "/assets/projects-screenshots/true-shade/landing.png",
+    id: "curesense",
+    category: "Healthcare AI",
+    title: "CureSense 🏥",
+    src: "/assets/projects-screenshots/curesense/Homepage.png",
     screenshots: [],
-    live: "",
-    github: "https://github.com/alwinjosegeorge/True_shade",
+    live: "https://curesense.vercel.app/",
+    github: "",
     skills: {
-      frontend: [PROJECT_SKILLS.react],
-      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.opencv, PROJECT_SKILLS.tensorflow]
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.supabase,
+        PROJECT_SKILLS.vercel,
+      ],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            A project designed to assist colour blind individuals by providing real-time image analysis to accurately identify, distinguish, and name colours.
+            CureSense is an AI-powered healthcare monitoring and treatment analysis platform built at Buildathon 2026, SJCET Palai. It focuses on chronic disease management, treatment resistance tracking, and intelligent patient monitoring using AI-driven insights.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
+          <ProjectsLinks live={this.live} />
 
-          <TypographyH3 className="my-4 mt-8">Real-Time Analysis</TypographyH3>
-          <p className="font-mono mb-2">Uses OpenCV and TensorFlow to process camera feed.</p>
+          <TypographyH3 className="my-4 mt-8">Dashboards</TypographyH3>
+          <p className="font-mono mb-2">
+            Role-based dashboards for doctors, nurses, hospitals, and patients — each with tailored insights and controls.
+          </p>
+          <SlideShow images={[
+            `${BASE_PATH}/curesense/Homepage.png`,
+            `${BASE_PATH}/curesense/Doctor_dashboard.png`,
+            `${BASE_PATH}/curesense/Hospital_dashboard.png`,
+            `${BASE_PATH}/curesense/Nurse_dashboard.png`,
+            `${BASE_PATH}/curesense/Patient _dashboard.png`,
+          ]} />
+
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6">
+            <li className="font-mono">🩺 Real-time symptom tracking for patients</li>
+            <li className="font-mono">🤖 AI-powered risk scoring and early-warning alerts</li>
+            <li className="font-mono">💊 Treatment effectiveness monitoring</li>
+            <li className="font-mono">📊 Interactive healthcare analytics dashboard</li>
+            <li className="font-mono">🏥 Role-based access for doctors, nurses, hospitals & patients</li>
+            <li className="font-mono">🔒 Secure and scalable healthcare workflow structure</li>
+          </ul>
         </div>
-      )
-    }
+      );
+    },
   },
 ];
 export default projects;

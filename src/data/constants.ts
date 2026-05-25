@@ -399,6 +399,25 @@ export const EXPERIENCE: Experience[] = [
       SkillNames.NODEJS,
     ],
   },
+  {
+    id: 6,
+    startDate: "Buildathon",
+    endDate: "SJCET Palai",
+    title: "CureSense – AI Healthcare Platform",
+    company: "Buildathon 2026",
+    description: [
+      "Built CureSense, an AI-powered healthcare monitoring and treatment analysis platform.",
+      "Implemented real-time symptom tracking, AI risk scoring, and early-warning alert systems.",
+      "Developed role-based dashboards for doctors, nurses, hospitals, and patients.",
+      "Designed treatment effectiveness monitoring using data-driven AI insights.",
+    ],
+    skills: [
+      SkillNames.REACT,
+      SkillNames.TS,
+      SkillNames.TAILWIND,
+      SkillNames.NODEJS,
+    ],
+  },
 ];
 
 export const themeDisclaimers = {
