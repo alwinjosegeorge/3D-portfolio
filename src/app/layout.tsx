@@ -10,23 +10,33 @@ import AppOverlays from "@/components/app-overlays";
 import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
-  title: config.title,
+  metadataBase: new URL(config.site),
+  title: {
+    default: config.title,
+    template: `%s | ${config.author}`,
+  },
   description: config.description.long,
   keywords: config.keywords,
   authors: [{ name: config.author }],
+  creator: config.author,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: config.title,
     description: config.description.short,
     url: config.site,
+    siteName: `${config.author} - SJCET Palai Portfolio`,
     images: [
       {
         url: config.ogImg,
         width: 800,
         height: 600,
-        alt: "Portfolio preview",
+        alt: `${config.author} Portfolio Preview`,
       },
     ],
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
@@ -37,7 +47,55 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${config.site}/#person`,
+      name: config.author,
+      alternateName: ["Alwin Jose", "Alwin", "Alwin Jose George SJCET", "Alwin SJCET"],
+      url: config.site,
+      image: config.ogImg,
+      jobTitle: "Computer Science Engineering Student & Full-Stack Web Developer",
+      worksFor: {
+        "@type": "EducationalOrganization",
+        name: "St. Joseph's College of Engineering and Technology, Palai",
+        alternateName: "SJCET Palai",
+      },
+      alumniOf: {
+        "@type": "EducationalOrganization",
+        name: "St. Joseph's College of Engineering and Technology, Palai",
+        alternateName: "SJCET Palai",
+      },
+      email: config.email,
+      sameAs: [
+        config.social.github,
+        config.social.linkedin,
+        config.social.instagram,
+      ].filter(Boolean),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${config.site}/#website`,
+      url: config.site,
+      name: "Alwin Jose George Portfolio",
+      description: config.description.short,
+      publisher: {
+        "@id": `${config.site}/#person`,
+      },
+    },
+  ],
 };
 
 const inter = Inter({
@@ -59,6 +117,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, archivoBlack.variable, "font-display"].join(" ")} suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}

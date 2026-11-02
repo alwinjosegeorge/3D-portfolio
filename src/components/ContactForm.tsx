@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [fullName, setFullName] = React.useState("");
@@ -22,22 +23,26 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_b2rif9e",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_5saqk4b",
+        {
+          name: fullName,
+          fullName: fullName,
+          from_name: fullName,
+          email: email,
+          reply_to: email,
+          message: message,
         },
-        body: JSON.stringify({
-          fullName,
-          email,
-          message,
-        }),
-      });
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
+        {
+          publicKey:
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "kt5NQf6sgQrAXWTJe",
+        }
+      );
+
       toast({
         title: "Thank you!",
-        description: "I'll get back to you as soon as possible.",
+        description: "Message sent successfully! I'll get back to you as soon as possible.",
         variant: "default",
         className: cn("top-0 mx-auto flex fixed md:top-4 md:right-4"),
       });
@@ -49,10 +54,12 @@ const ContactForm = () => {
         router.push("/");
         clearTimeout(timer);
       }, 1000);
-    } catch (err) {
+    } catch (err: any) {
+      console.error("EmailJS Error:", err);
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description:
+          err?.text || "Message sending failed. Please check your fields and try again.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),

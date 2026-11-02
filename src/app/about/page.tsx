@@ -25,6 +25,7 @@ import {
 } from "react-icons/ri";
 import {
   SiExpress,
+  SiInstagram,
   SiJavascript,
   SiKubuntu,
   SiPm2,
@@ -34,6 +35,7 @@ import {
   SiVscodium,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
+import { config } from "@/data/config";
 
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -43,27 +45,27 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "naresh.khatri2345@gmail",
-    href: "mailto:naresh.khatri2345@gmail.com",
+    content: config.email,
+    href: `mailto:${config.email}`,
     icon: <FaEnvelope height={"50px"} />,
   },
   {
-    name: "Phone",
-    content: "1234567890",
-    href: "tel:1234567890",
-    icon: <FaPhone height={"50px"} />,
-  },
-  {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/naresh-khatri/",
-    content: "/naresh-khatri",
+    href: config.social.linkedin,
+    content: "/alwin-jose-george",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Naresh-Khatri",
-    content: "/naresh-khatri",
+    href: config.social.github,
+    content: "/alwinjosegeorge",
     icon: <FaGithub height={"50px"} />,
+  },
+  {
+    name: "Instagram",
+    href: config.social.instagram,
+    content: "/alwin_jose_george",
+    icon: <SiInstagram size={"28px"} />,
   },
 ];
 
@@ -251,9 +253,9 @@ function Page() {
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Naresh Khatri</p>
+                <p className="text-center text-xl">{config.author}</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
-                  Web Developer
+                  CSE Student @ SJCET Palai
                 </div>
               </div>
             </div>
@@ -286,17 +288,14 @@ function Page() {
             style={{ backdropFilter: "blur(2px)" }}
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
-            <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Naresh, a Fullstack developer passionate about
-              creating meaningful digital experiences. With great in Web
-              development, I thrive on turning ideas into reality through coding
-              and design. My journey began with a fascination for technology and
-              a drive to make a positive impact.
+            <p className="mb-6 text-roboto">
+              Hey there! I&apos;m {config.author} (Alwin Jose / Alwin), a Computer Science & Engineering (CSE) student at SJCET Palai (St. Joseph&apos;s College of Engineering and Technology, Palai).
+            </p>
+            <p className="mb-6">
+              {config.description.long}
             </p>
             <p className="mb-10">
-              When I&apos;m not coding, you can find me [Your
-              Interests/Hobbies], exploring new technologies, or sipping coffee
-              while brainstorming my next project.
+              When I&apos;m not coding, you can find me exploring new technologies, participating in hackathons, learning modern frameworks, or brainstorming my next project.
             </p>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">

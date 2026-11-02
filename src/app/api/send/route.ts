@@ -3,12 +3,12 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "re_7fDcmKYa_6k6kMCFVLzpXiBK7rJxcvkZY");
+const resend = new Resend(process.env.RESEND_API_KEY || "");
 
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
   email: z.string().email({ message: "Email is invalid!" }),
-  message: z.string().min(10, "Message is too short!"),
+  message: z.string().min(1, "Message cannot be empty!"),
 });
 export async function POST(req: Request) {
   try {
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
     });
 
     if (resendError) {
-      return Response.json({ resendError }, { status: 500 });
+      return Response.json({ error: resendError.message }, { status: 500 });
     }
 
     return Response.json(resendData);
